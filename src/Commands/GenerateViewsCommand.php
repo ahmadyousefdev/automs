@@ -352,7 +352,9 @@ class GenerateViewsCommand extends Command
                 if ($field['html-type'] == 'file') {
                     $tds .= "\r\n\t\t\t\t\t\t\t\t" . '<td scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 tracking-wider">'
                         . "\r\n\t\t\t\t\t\t\t\t\t" . '<div class="flex-shrink-0 h-10 w-10">'
-                        . "\r\n\t\t\t\t\t\t\t\t\t\t" . '<img class="h-10 w-10 rounded-md" src="{{url($' . $modelNameSmall . '->' . $field['name'] . ')}}" alt="">'
+                        . "\r\n\t\t\t\t\t\t\t\t\t" . '@if($'.Str::snake(trim($this->class_name)).'->'.$field['name'].')'
+                        . "\r\n\t\t\t\t\t\t\t\t\t\t" . '<img class="w-10 h-10" src="{{Storage::disk("public")->url($'.Str::snake(trim($this->class_name)).'->'.$field['name'].')}}" />'
+                        . "\r\n\t\t\t\t\t\t\t\t\t" . '@endif'
                         . "\r\n\t\t\t\t\t\t\t\t\t" . '</div>'
                         . "\r\n\t\t\t\t\t\t\t\t" . '</td>';
                 } else {
@@ -438,7 +440,9 @@ class GenerateViewsCommand extends Command
         // if image
         if ($field['html-type'] == 'file') { // we need to figure out something to verify if it's an image or a file
             $viewElementStubContent = str_replace('{{ element_value }}',
-            '<img class="w-60" src="{{Storage::disk("public")->url($'.Str::snake(trim($this->class_name)).'->'.$fieldName.')}}" />',
+            '@if($'.Str::snake(trim($this->class_name)).'->'.$fieldName.')'.
+            '<img class="w-60" src="{{Storage::disk("public")->url($'.Str::snake(trim($this->class_name)).'->'.$fieldName.')}}" />'.
+            '@endif',
             $viewElementStubContent);
         }
         else {

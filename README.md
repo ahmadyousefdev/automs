@@ -84,6 +84,10 @@ This package have a set of built-in laravel component definitions that are conne
 
 A full list of the built-in components can be found inside this [json file](src/model_names.json)
 
+## Notes
+
+if there is a file uploader in any component, it will use the default public disk as a storage. go to your `config/filesystems.php` to configure the storage, or if you are comfortable with the existing settings you can run `php artisan storage:link` to connect the public path to the storage path.
+
 ## Change log
 
 Please see the [changelog](changelog.md) for more information on what has changed recently.
