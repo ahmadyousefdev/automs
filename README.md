@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
-[![Build Status][ico-travis]][link-travis]
+<!-- [![Build Status][ico-travis]][link-travis] -->
 
 This tool allows you to create a fully functional component for Laravel using its Jetstream dashboard by one line.
 
@@ -33,7 +33,6 @@ php artisan migrate
 php artisan vendor:publish --tag=jetstream-views
 ```
 to learn more about `Jetstream` and `Livewire` and how to install them properly please go to this [link](https://jetstream.laravel.com/2.x/installation.html).
-
 
 ## Usage
 
@@ -107,7 +106,7 @@ MIT. Please see the [license file](license.md) for more information.
 
 ## Acknowledgements
 ### Influencer References
-These two packages inspired us to make this package and they provide much more variety of commands and flexibility
+These two packages inspired us to make this package and they provide much more commands which makes them suitable for more complex applications. Sadly, they don't support Laravel 8 or Jetstream yet.
 - [CrestApps/laravel-code-generator](https://github.com/CrestApps/laravel-code-generator)
 - [laravel-shift/blueprint](https://github.com/laravel-shift/blueprint)
 ### Other links
