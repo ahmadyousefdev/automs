@@ -1,8 +1,8 @@
 # Automs
 
-<!-- [![Latest Version on Packagist][ico-version]][link-packagist] -->
-<!-- [![Total Downloads][ico-downloads]][link-downloads] -->
-<!-- [![Build Status][ico-travis]][link-travis] -->
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Total Downloads][ico-downloads]][link-downloads]
+[![Build Status][ico-travis]][link-travis]
 
 This tool allows you to create a fully functional component for Laravel using its Jetstream dashboard by one line.
 
@@ -26,6 +26,7 @@ We included `Jetstream` and `livewire` in the composer installer
 
 you have to complete the installation of these two packages by running these commands
 ``` bash
+php artisan jetstream:install livewire
 npm install
 npm run dev
 php artisan migrate
@@ -113,7 +114,7 @@ These two packages inspired us to make this package and they provide much more v
 - [Laravel Package Development](https://youtu.be/ivrc1ZKFgHI)
 - [Laravel 8 Livewire Tutorial](https://youtu.be/Ub6FMEWw7kA)
 
-<!-- [ico-version]: https://img.shields.io/packagist/v/ahmadyousefdev/automs.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/ahmadyousefdev/automs.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/ahmadyousefdev/automs.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/ahmadyousefdev/automs/master.svg?style=flat-square
 [ico-styleci]: https://styleci.io/repos/12345678/shield
@@ -123,4 +124,3 @@ These two packages inspired us to make this package and they provide much more v
 [link-travis]: https://travis-ci.org/ahmadyousefdev/automs
 [link-styleci]: https://styleci.io/repos/12345678
 [link-author]: https://github.com/ahmadyousefdev
-[link-contributors]: ../../contributors -->
