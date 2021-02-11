@@ -1,0 +1,31 @@
+{
+    "names": [
+        "Category", "Level", "Section", "List", "Department", "Brand", "Type"
+    ],
+    "fields": [
+        {
+            "name": "name",
+            "data-type": "string",
+            "html-type": "text",
+            "validation": "required|string|min:1|max:255",
+            "nullable": false,
+            "index": true
+        },
+        {
+            "name": "description",
+            "data-type": "text",
+            "html-type": "textarea",
+            "validation": "nullable|min:3|max:1000",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "thumbnail",
+            "data-type": "string",
+            "html-type": "file",
+            "validation": "nullable|image",
+            "nullable": true,
+            "index": false
+        }
+    ]
+}

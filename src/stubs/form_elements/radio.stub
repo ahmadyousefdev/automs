@@ -1,0 +1,8 @@
+                        <div class="col-span-3 sm:col-span-2">
+                            <label for="{{ input_name }}" class="block text-sm font-medium text-gray-700">
+                                {{ input_name_title }}
+                            </label>
+                            <div class="mt-1 flex rounded-md">
+                                {{ radio_inputs }}
+                            </div>
+                        </div>

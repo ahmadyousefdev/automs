@@ -1,0 +1,8 @@
+                        <div class="col-span-3 sm:col-span-2">
+                            <label for="{{ input_name }}" class="block text-sm font-medium text-gray-700">
+                                {{ input_name_title }}
+                            </label>
+                            <div class="mt-1 flex rounded-md">
+                                <input type="file" {{ required }} {{ custom_var }} name="{{ input_name }}" id="{{ input_name }}" class="block w-full border-gray-300" placeholder="Enter {{ input_name }} here">
+                            </div>
+                        </div>

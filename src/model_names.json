@@ -1,0 +1,13 @@
+[
+  { "file_name":"articles","names":[ "Article","Blog","Essay" ] },
+  { "file_name":"authors", "names":[ "Author", "Litterateur", "Writer", "Poet", "Reporter", "Actor", "Star", "Celebrity" ] },
+  { "file_name":"books", "names":[ "Book", "Paper", "Research", "Novel" ] },
+  { "file_name":"films", "names":[ "Film", "Movie", "Documentary" ] },
+  { "file_name":"pages", "names":[ "Page" ] },
+  { "file_name":"photos", "names":[ "Photo","Image","Picture","Photograph" ] },
+  { "file_name":"videos", "names":[ "Video","Youtube", "Clip" ] },
+  { "file_name":"categories", "names":[ "Category", "Level", "Section", "List", "Department", "Brand", "Type" ] },
+  { "file_name":"companies", "names":[ "Company", "Supplier","Distributor", "Provider", "Merchandiser", "Shop" ] },
+  { "file_name":"products", "names":[ "Product" ] },
+  { "file_name":"customers", "names":[ "Customer", "Client","Buyer", "Consumer", "Visitor" ] }
+]

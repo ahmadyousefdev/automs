@@ -1,0 +1,5 @@
+                                <label class="mr-2">
+                                    <input
+                                        class="focus:ring-indigo-500 focus:border-indigo-500 mr-1 rounded-md border-gray-300"
+                                        type="checkbox" {{ required }} name="{{ input_name }}[]" value="{{ value }}" {{ checked }}> {{ value }}
+                                </label>

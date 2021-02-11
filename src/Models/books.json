@@ -1,0 +1,63 @@
+{
+    "names": [
+        "Book", "Paper", "Research", "Novel"
+    ],
+    "fields": [
+        {
+            "name": "name",
+            "data-type": "text",
+            "html-type": "text",
+            "validation": "required|string|min:1",
+            "nullable": false,
+            "index": true
+        },
+        {
+            "name": "description",
+            "data-type": "text",
+            "html-type": "textarea",
+            "validation": "nullable|min:3|max:1000",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "cover",
+            "data-type": "string",
+            "html-type": "file",
+            "validation": "nullable|image",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "volumes",
+            "data-type": "integer",
+            "html-type": "number",
+            "validation": "nullable|integer",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "pages",
+            "data-type": "integer",
+            "html-type": "number",
+            "validation": "nullable|integer",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "publication_place",
+            "data-type": "text",
+            "html-type": "text",
+            "validation": "nullable|string|min:1",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "isbn",
+            "data-type": "text",
+            "html-type": "text",
+            "validation": "nullable|string|min:1",
+            "nullable": true,
+            "index": false
+        }
+    ]
+}

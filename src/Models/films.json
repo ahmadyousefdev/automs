@@ -1,0 +1,55 @@
+{
+    "names": [
+        "Film", "Movie", "Documentary"
+    ],
+    "fields": [
+        {
+            "name": "title",
+            "data-type": "string",
+            "html-type": "text",
+            "validation": "required|string|min:1|max:255",
+            "nullable": false,
+            "index": true
+        },
+        {
+            "name": "description",
+            "data-type": "text",
+            "html-type": "textarea",
+            "validation": "nullable|min:3|max:1000",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "poster",
+            "data-type": "string",
+            "html-type": "file",
+            "validation": "nullable|image",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "release_date",
+            "data-type": "string",
+            "html-type": "date",
+            "validation": "nullable|date",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "duration",
+            "data-type": "string",
+            "html-type": "text",
+            "validation": "required|string|min:1|max:255",
+            "nullable": false,
+            "index": false
+        },
+        {
+            "name": "rating",
+            "data-type": "float",
+            "html-type": "number",
+            "validation": "nullable|date",
+            "nullable": true,
+            "index": false
+        }
+    ]
+}

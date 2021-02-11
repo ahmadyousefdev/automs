@@ -1,0 +1,10 @@
+                        <div class="col-span-3 sm:col-span-2">
+                            <label for="{{ input_name }}" class="block text-sm font-medium text-gray-700">
+                                {{ input_name_title }}
+                            </label>
+                            <div class="mt-1">
+                                <textarea {{ required }} {{ custom_var }} id="{{ input_name }}" name="{{ input_name }}" rows="3"
+                                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full rounded-md border-gray-300"
+                                placeholder="Enter {{ input_name }} here">{{ old('{{ input_name }}'{{ old_value }}) }}</textarea>
+                            </div>
+                        </div>

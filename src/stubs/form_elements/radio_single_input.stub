@@ -1,0 +1,3 @@
+                                    <input class="focus:ring-indigo-500 focus:border-indigo-500 mr-1 rounded-full border-gray-300"
+                                            type="radio" {{ required }} name="{{ input_name }}" value="{{ value }}" {{ checked }}>
+                                    <label class="mr-2">{{ value }}</label>

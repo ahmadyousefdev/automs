@@ -1,0 +1,39 @@
+{
+    "names": [
+        "Article","Blog","Essay"
+    ],
+    "fields": [
+        {
+            "name": "title",
+            "data-type": "string",
+            "html-type": "text",
+            "validation": "required|string|min:1|max:255",
+            "nullable": false,
+            "index": true
+        },
+        {
+            "name": "description",
+            "data-type": "text",
+            "html-type": "textarea",
+            "validation": "nullable|min:3|max:1000",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "body",
+            "data-type": "text",
+            "html-type": "textarea",
+            "validation": "required|min:3",
+            "nullable": false,
+            "index": false
+        },
+        {
+            "name": "thumbnail",
+            "data-type": "string",
+            "html-type": "file",
+            "validation": "nullable|image",
+            "nullable": true,
+            "index": true
+        }
+    ]
+}

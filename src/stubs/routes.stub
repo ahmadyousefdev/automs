@@ -1,0 +1,9 @@
+Route::group(['prefix' => '{{ model_name_plural }}', 'middleware' => ['auth']], function () {
+    Route::get('/', [{{ controller_name }}::class, 'index'])->name('{{ model_name_plural }}.index');
+    Route::get('/create', [{{ controller_name }}::class, 'create'])->name('{{ model_name_plural }}.create');
+    Route::post('/submit',[{{ controller_name }}::class, 'store'])->name('{{ model_name_plural }}.store');
+    Route::get('/id_{id}', [{{ controller_name }}::class, 'show'])->name('{{ model_name_plural }}.show');
+    Route::get('/id_{id}/edit',[{{ controller_name }}::class, 'edit'])->name('{{ model_name_plural }}.edit');
+    Route::put('/id_{id}/update',[{{ controller_name }}::class, 'update'])->name('{{ model_name_plural }}.update');
+    Route::put('/id_{id}/destroy',[{{ controller_name }}::class, 'destroy'])->name('{{ model_name_plural }}.destroy');
+});

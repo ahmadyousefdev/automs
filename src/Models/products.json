@@ -1,0 +1,72 @@
+{
+    "names": [
+        "Product"
+    ],
+    "fields": [
+        {
+            "name": "category_id",
+            "data-type": "integer",
+            "html-type": "number",
+            "validation": "required|integer",
+            "nullable": false,
+            "index": true
+        },
+        {
+            "name": "title",
+            "data-type": "string",
+            "html-type": "text",
+            "validation": "required|string|min:1|max:255",
+            "nullable": false,
+            "index": true
+        },
+        {
+            "name": "squ",
+            "data-type": "string",
+            "html-type": "text",
+            "validation": "nullable|string|min:1|max:255",
+            "nullable": true,
+            "index": true
+        },
+        {
+            "name": "description",
+            "data-type": "text",
+            "html-type": "textarea",
+            "validation": "nullable|min:3|max:1000",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "price",
+            "data-type": "float",
+            "html-type": "number",
+            "validation": "nullable",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "picture",
+            "data-type": "string",
+            "html-type": "file",
+            "validation": "nullable|image",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "sizes",
+            "data-type": "string",
+            "html-type": "checkbox",
+            "validation": "nullable",
+            "nullable": true,
+            "index": false,
+            "values": ["small","medium","large","x-large"]
+        },
+        {
+            "name": "rating",
+            "data-type": "float",
+            "html-type": "number",
+            "validation": "nullable|date",
+            "nullable": true,
+            "index": false
+        }
+    ]
+}

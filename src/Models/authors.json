@@ -1,0 +1,39 @@
+{
+    "names": [
+        "Author", "Litterateur", "Writer", "Poet", "Reporter", "Actor", "Star", "Celebrity"
+    ],
+    "fields": [
+        {
+            "name": "first_name",
+            "data-type": "string",
+            "html-type": "text",
+            "validation": "required|string|min:1|max:255",
+            "nullable": false,
+            "index": true
+        },
+        {
+            "name": "middle_name",
+            "data-type": "string",
+            "html-type": "text",
+            "validation": "nullable|string|min:1|max:255",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "last_name",
+            "data-type": "string",
+            "html-type": "text",
+            "validation": "required|string|min:1|max:255",
+            "nullable": false,
+            "index": true
+        },
+        {
+            "name": "resume",
+            "data-type": "text",
+            "html-type": "textarea",
+            "validation": "nullable|min:3|max:1000",
+            "nullable": true,
+            "index": false
+        }
+    ]
+}

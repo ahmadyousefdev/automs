@@ -1,0 +1,131 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ namespacedModel }};
+use Illuminate\Http\Request;
+use Validator;
+use Carbon\Carbon;
+use Illuminate\Support\Str;
+
+class {{ class_name }}Controller extends Controller
+{
+
+    /**
+     * @param array $data
+     * @return mixed
+     */
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            {{ validation_array }}
+        ]);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        ${{ model_name_plural }} = {{ class_name }}::orderby('created_at','desc')->paginate(25);
+        return view('{{ model_name_plural }}.index')->with('{{ model_name_plural }}',${{ model_name_plural }});
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('{{ model_name_plural }}.create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        // Validate
+        $this->validator($request->all())->validate();
+        {{ converted_arrays }}
+        
+        // Store
+        ${{ model_name_small }} = {{ class_name }}::create($request->all());
+
+        {{ upload_logic }}
+        // Flash message
+        $request->session()->flash('alert-success', '{{ class_name }} Created successfully');
+        // Return redirect
+        return redirect()->route('{{ model_name_plural }}.index');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     * @return \Illuminate\Http\Response
+     */
+    public function show(${{ modelVariable }})
+    {
+        ${{ model_name_small }} = {{ class_name }}::where('id',${{ modelVariable }})->firstOrFail();
+        return view('{{ model_name_plural }}.show')->with('{{ model_name_small }}',${{ model_name_small }});
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(${{ modelVariable }})
+    {
+        ${{ model_name_small }} = {{ class_name }}::where('id',${{ modelVariable }})->firstOrFail();
+        return view('{{ model_name_plural }}.edit')->with('{{ model_name_small }}',${{ model_name_small }});
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, ${{ modelVariable }})
+    {
+        ${{ model_name_small }} = {{ class_name }}::where('id',${{ modelVariable }})->firstOrFail();
+        // Validate
+        $this->validator($request->all())->validate();
+        {{ converted_arrays }}
+        
+        // Update
+        ${{ model_name_small }}->update($request->all());
+
+        {{ upload_logic }}
+        // Flash message
+        $request->session()->flash('alert-success', '{{ class_name }} Updated successfully');
+        // Return redirect
+        return redirect()->route('{{ model_name_plural }}.index');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Request $request, ${{ modelVariable }})
+    {
+        ${{ model_name_small }} = {{ class_name }}::where('id',${{ modelVariable }})->firstOrFail();
+        ${{ model_name_small }}->delete();
+        // Flash message
+        $request->session()->flash('alert-success', '{{ class_name }} Deleted successfully');
+        // Return redirect
+        return redirect()->route('{{ model_name_plural }}.index');
+    }
+}

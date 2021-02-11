@@ -1,0 +1,111 @@
+{
+    "names": [
+        "Company", "Supplier","Distributor", "Provider", "Merchandiser", "Shop"
+    ],
+    "fields": [
+        {
+            "name": "name",
+            "data-type": "string",
+            "html-type": "text",
+            "validation": "required|string|min:1|max:255",
+            "nullable": false,
+            "index": true
+        },
+        {
+            "name": "contact_f_name",
+            "data-type": "string",
+            "html-type": "text",
+            "validation": "nullable|string|min:1|max:255",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "contact_l_name",
+            "data-type": "string",
+            "html-type": "text",
+            "validation": "nullable|string|min:1|max:255",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "address_1",
+            "data-type": "text",
+            "html-type": "nullable|textarea",
+            "validation": "min:1",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "address_2",
+            "data-type": "text",
+            "html-type": "nullable|textarea",
+            "validation": "min:1",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "city",
+            "data-type": "string",
+            "html-type": "text",
+            "validation": "nullable|string|min:1|max:255",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "country",
+            "data-type": "string",
+            "html-type": "text",
+            "validation": "nullable|string|min:1|max:255",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "zip_code",
+            "data-type": "integer",
+            "html-type": "number",
+            "validation": "nullable|integer",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "phone",
+            "data-type": "string",
+            "html-type": "tel",
+            "validation": "nullable|string|min:1|max:255",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "email",
+            "data-type": "string",
+            "html-type": "email",
+            "validation": "nullable|email|min:1|max:255",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "website",
+            "data-type": "string",
+            "html-type": "url",
+            "validation": "nullable|url|min:1|max:255",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "logo",
+            "data-type": "string",
+            "html-type": "file",
+            "validation": "nullable|image",
+            "nullable": true,
+            "index": false
+        },
+        {
+            "name": "notes",
+            "data-type": "text",
+            "html-type": "nullable|textarea",
+            "validation": "min:1",
+            "nullable": true,
+            "index": false
+        }
+    ]
+}
