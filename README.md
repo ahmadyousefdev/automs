@@ -4,7 +4,7 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 <!-- [![Build Status][ico-travis]][link-travis] -->
 
-This tool allows you to create a fully functional component for Laravel using its Jetstream dashboard by one line.
+This tool allows you to create a fully functional component for Laravel using its Jetstream dashboard by one line. Watch [this video](https://youtu.be/fAWRMLBYqRA) to see how you can install it and how it works.
 
 ## Requirements
 
