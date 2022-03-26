@@ -12,8 +12,7 @@
     "homepage": "https://github.com/ahmadyousefdev/automs",
     "keywords": ["Laravel", "Automs"],
     "require": {
-        "illuminate/support": "self.version",
-        "laravel/framework": "^8.12",
+        "illuminate/support": "5.3.* || 5.4.* || 5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6.0 || ^7.0 || ^8.0|^9.0",
         "laravel/jetstream": "^2.1",
         "livewire/livewire": "^2.0"
     },
